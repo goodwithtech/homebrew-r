@@ -2,16 +2,16 @@
 class Dockertags < Formula
   desc "docker container tag viewer"
   homepage "https://github.com/goodwithtech/dockertags"
-  version "0.0.3"
+  version "0.0.4"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/goodwithtech/dockertags/releases/download/v0.0.3/dockertags_0.0.3_macOS-64bit.tar.gz"
-    sha256 "f81449f9d4ce3574e29e4184bda3989473373bb9cd6096c7b952aea43f6f90ac"
+    url "https://github.com/goodwithtech/dockertags/releases/download/v0.0.4/dockertags_0.0.4_macOS-64bit.tar.gz"
+    sha256 "efc8b0452319e870b9bc92ee1da6eda7937e69a8fd6bcdb3aa377f544b6ed647"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/goodwithtech/dockertags/releases/download/v0.0.3/dockertags_0.0.3_Linux-64bit.tar.gz"
-      sha256 "152c5b2c73249fecc472b741dc8253d8a3cc2179831696288c3c857ed1cd6a0f"
+      url "https://github.com/goodwithtech/dockertags/releases/download/v0.0.4/dockertags_0.0.4_Linux-64bit.tar.gz"
+      sha256 "5b877343bb56ca594fcc1ceec224b3041470c4915923d121a5b64e29ff0b9418"
     end
   end
 
