@@ -2,24 +2,22 @@
 class Dockle < Formula
   desc "Simple security auditing, helping build the Best Docker Images"
   homepage "https://github.com/goodwithtech/dockle"
-  version "0.2.0"
+  version "0.2.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/goodwithtech/dockle/releases/download/v0.2.0/dockle_0.2.0_macOS-64bit.tar.gz"
-    sha256 "4b38e80d8d55e9da15b684e2335904d70087371ddc9c7d9ba10b746b6872e64c"
+    url "https://github.com/goodwithtech/dockle/releases/download/v0.2.1/dockle_0.2.1_macOS-64bit.tar.gz"
+    sha256 "f55722e006c6860fcd6eecd98f206fe6bbc0a03b27ea7540a0db6dcad4685d4b"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/goodwithtech/dockle/releases/download/v0.2.0/dockle_0.2.0_Linux-64bit.tar.gz"
-      sha256 "a2eb187b07671dd61b160bbf182f7d45528872bbe10d98f06153da1f70e56538"
+      url "https://github.com/goodwithtech/dockle/releases/download/v0.2.1/dockle_0.2.1_Linux-64bit.tar.gz"
+      sha256 "5e4056710b4ea3d3593413f2e1dcca23f88fb29a03955023a3236f84d71b8abb"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/goodwithtech/dockle/releases/download/v0.2.0/dockle_0.2.0_Linux-ARM64.tar.gz"
-        sha256 "b384bd5b27047418144cc8cf67decc1460259bade76608ca501ffc7e35faa61b"
+        url "https://github.com/goodwithtech/dockle/releases/download/v0.2.1/dockle_0.2.1_Linux-ARM64.tar.gz"
+        sha256 "98d169786e12ec914f1572c91a743ae1be38e967c7f3d0a6fba4009cf3a17967"
       else
-        url "https://github.com/goodwithtech/dockle/releases/download/v0.2.0/dockle_0.2.0_Linux-ARM.tar.gz"
-        sha256 "1281f106340305e067b1c8f4b70283128afd55e8ed1b2ebcee252dc4a0b69449"
       end
     end
   end
