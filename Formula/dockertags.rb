@@ -2,21 +2,21 @@
 class Dockertags < Formula
   desc "docker container tag viewer"
   homepage "https://github.com/goodwithtech/dockertags"
-  version "0.0.9"
+  version "0.1.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/goodwithtech/dockertags/releases/download/v0.0.9/dockertags_0.0.9_macOS-64bit.tar.gz"
-    sha256 "43fd2b46029bb26a81726906ae4e6e51d2838005fe4db909f3f872f82aaadbe3"
+    url "https://github.com/goodwithtech/dockertags/releases/download/v0.1.0/dockertags_0.1.0_macOS-64bit.tar.gz"
+    sha256 "a0528198d61fa5fc733239b090d5294107c47a495ca80de5f18da96e9657685b"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/goodwithtech/dockertags/releases/download/v0.0.9/dockertags_0.0.9_Linux-64bit.tar.gz"
-      sha256 "10b64d06e43d6c3c98875c734cdc9297eacf89fb1ef58d7ff9ec9ba3efe87855"
+      url "https://github.com/goodwithtech/dockertags/releases/download/v0.1.0/dockertags_0.1.0_Linux-64bit.tar.gz"
+      sha256 "c3ed8ca2c8c7e61a1de9804531a6767f32ebf0ad409931d4ff969e6d0c1e9840"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/goodwithtech/dockertags/releases/download/v0.0.9/dockertags_0.0.9_Linux-ARM64.tar.gz"
-        sha256 "edd1ff0ed77067e70b621477b6d083cfca95c12f2e84af5ba897f2776539697f"
+        url "https://github.com/goodwithtech/dockertags/releases/download/v0.1.0/dockertags_0.1.0_Linux-ARM64.tar.gz"
+        sha256 "a4d5ef6de4d13909065c129748eb04cb3066bcbbc235ca477865c72c0256050f"
       else
       end
     end
