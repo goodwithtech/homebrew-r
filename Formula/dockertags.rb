@@ -7,16 +7,16 @@ class Dockertags < Formula
 
   if OS.mac?
     url "https://github.com/goodwithtech/dockertags/releases/download/v0.1.2/dockertags_0.1.2_macOS-64bit.tar.gz"
-    sha256 "54a46adbbb4b8bef46d28e13dec5940ff5d8d22bb3405c82d110755c18ab29d0"
+    sha256 "7596f23c9a8da47f55f6b88c82cc6d5b3526d1ae4b318040f024ecfffffacda4"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/goodwithtech/dockertags/releases/download/v0.1.2/dockertags_0.1.2_Linux-64bit.tar.gz"
-      sha256 "4cb5f14faa20d7d3edbc24fbd59e9d2cd4d7d8a4d682363fb2e7203bd56b9b78"
+      sha256 "3a1451c90565f3b7d8549f4847cf0dba073210a32c8a942a4973de1c3d4abf36"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/goodwithtech/dockertags/releases/download/v0.1.2/dockertags_0.1.2_Linux-ARM64.tar.gz"
-        sha256 "82400007d381c7ccbfedbc3ea30fe16ef5305a4920bfe0ee06421d9ee395e1c9"
+        sha256 "f94d34301d1200efdbfd371b9c3f02cc94176fd5a82072c52835041a0c9ebbbd"
       else
       end
     end
