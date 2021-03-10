@@ -5,20 +5,20 @@
 class Sqlboiler < Formula
   desc "Generate a Go ORM tailored to your database schema."
   homepage "https://github.com/volatiletech/sqlboiler"
-  version "4.4.2"
+  version "4.4.3"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/goodwithtech/sqlboiler/releases/download/v4.4.2/sqlboiler_4.4.2_macOS-64bit.tar.gz"
-    sha256 "6aecd942563cd48429ba147a5997b26b69ffc246e4967cab458545a9f92015ef"
+    url "https://github.com/goodwithtech/sqlboiler/releases/download/v4.4.3/sqlboiler_4.4.3_macOS-64bit.tar.gz"
+    sha256 "53d85581a356bc1b2ceb8b14a65b18eef7fe8c7aef2390dae404630d1bc3ebd8"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/goodwithtech/sqlboiler/releases/download/v4.4.2/sqlboiler_4.4.2_Linux-64bit.tar.gz"
-    sha256 "89aa5a581f037acf6f7456b41789ab817277306f095ee2cee79854513da1acc5"
+    url "https://github.com/goodwithtech/sqlboiler/releases/download/v4.4.3/sqlboiler_4.4.3_Linux-64bit.tar.gz"
+    sha256 "9a0c033bcbe6086fc318aba1d8042dd9566a05908f05073577127ba0303d1412"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/goodwithtech/sqlboiler/releases/download/v4.4.2/sqlboiler_4.4.2_Linux-ARM64.tar.gz"
-    sha256 "cf89636cecafa779d9ed8e0e1ff026d9e2de1c01830714636ba1401f90e54cc3"
+    url "https://github.com/goodwithtech/sqlboiler/releases/download/v4.4.3/sqlboiler_4.4.3_Linux-ARM64.tar.gz"
+    sha256 "1cd8408406b990f4351c6ae2b896dfb7df40d72cac488901c401801a810fe453"
   end
 
   def install
