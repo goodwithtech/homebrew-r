@@ -6,7 +6,6 @@ class Dockertags < Formula
   desc "a CLI tool for fetching container image tags."
   homepage "https://github.com/goodwithtech/dockertags"
   version "0.1.7"
-  bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/goodwithtech/dockertags/releases/download/v0.1.7/dockertags_0.1.7_macOS-64bit.tar.gz"

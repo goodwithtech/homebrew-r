@@ -6,7 +6,6 @@ class Sqlboiler < Formula
   desc "Generate a Go ORM tailored to your database schema."
   homepage "https://github.com/volatiletech/sqlboiler"
   version "4.4.5"
-  bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/goodwithtech/sqlboiler/releases/download/v4.4.5/sqlboiler_4.4.5_macOS-64bit.tar.gz"

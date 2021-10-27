@@ -6,7 +6,6 @@ class Dockle < Formula
   desc "Simple security auditing, helping build the Best Docker Images"
   homepage "https://github.com/goodwithtech/dockle"
   version "0.4.3"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
