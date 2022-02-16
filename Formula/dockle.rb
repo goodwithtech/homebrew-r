@@ -5,32 +5,44 @@
 class Dockle < Formula
   desc "Simple security auditing, helping build the Best Docker Images"
   homepage "https://github.com/goodwithtech/dockle"
-  version "0.4.3"
+  version "0.4.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/goodwithtech/dockle/releases/download/v0.4.3/dockle_0.4.3_macOS-64bit.tar.gz"
-      sha256 "136a2dcfdb3ad7ec7b2b78dada2e95f899c7682f14805227bddcfb45726104b8"
+      url "https://github.com/goodwithtech/dockle/releases/download/v0.4.4/dockle_0.4.4_macOS-64bit.tar.gz"
+      sha256 "612bab3eee6c78e453d492d18c6981506a5e6af0037540a48b941bf4e2859e72"
+
+      def install
+        bin.install "dockle"
+      end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/goodwithtech/dockle/releases/download/v0.4.3/dockle_0.4.3_macOS-ARM64.tar.gz"
-      sha256 "2df34b5df2ac3211ca000a19c0b70b2469543c8402b3d4690dea1170085cf539"
+      url "https://github.com/goodwithtech/dockle/releases/download/v0.4.4/dockle_0.4.4_macOS-ARM64.tar.gz"
+      sha256 "15e5a0a13ce9d7054723d9373db17c7f71bb1843dd93c7b837c6dd5b0b430751"
+
+      def install
+        bin.install "dockle"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goodwithtech/dockle/releases/download/v0.4.3/dockle_0.4.3_Linux-ARM64.tar.gz"
-      sha256 "4f6b64280e6eca8997470952b59a7e135cfeaa7d66fedd194c12fba6f17e6617"
+      url "https://github.com/goodwithtech/dockle/releases/download/v0.4.4/dockle_0.4.4_Linux-ARM64.tar.gz"
+      sha256 "8bf925106edac94e2816bd89f8cd970c32a04f923d7c517a865ad747428ed81f"
+
+      def install
+        bin.install "dockle"
+      end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/goodwithtech/dockle/releases/download/v0.4.3/dockle_0.4.3_Linux-64bit.tar.gz"
-      sha256 "3d98159e6860076f6996fc58ae050f20d308fe2b392ac9b80f13aaa678491beb"
-    end
-  end
+      url "https://github.com/goodwithtech/dockle/releases/download/v0.4.4/dockle_0.4.4_Linux-64bit.tar.gz"
+      sha256 "e94678ccc175e64e1301bbe28046a6abad735f2bfc412e9e88a92ecb8358e845"
 
-  def install
-    bin.install "dockle"
+      def install
+        bin.install "dockle"
+      end
+    end
   end
 
   test do
