@@ -5,20 +5,20 @@
 class Dockle < Formula
   desc "Simple security auditing, helping build the Best Docker Images"
   homepage "https://github.com/goodwithtech/dockle"
-  version "0.4.8"
+  version "0.4.9"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/goodwithtech/dockle/releases/download/v0.4.8/dockle_0.4.8_macOS-ARM64.tar.gz"
-      sha256 "3083e06633519db97fc5a7fd508d6f41529ae80cdc87fe12c8df684ca08de5c2"
+    if Hardware::CPU.intel?
+      url "https://github.com/goodwithtech/dockle/releases/download/v0.4.9/dockle_0.4.9_macOS-64bit.tar.gz"
+      sha256 "cb3c6b095c15080f7fe47cb68518722339ee51f4134e3eaa825636e47787cf16"
 
       def install
         bin.install "dockle"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/goodwithtech/dockle/releases/download/v0.4.8/dockle_0.4.8_macOS-64bit.tar.gz"
-      sha256 "a3f3e43d923990beeb67b43a969a1c99db3971488fa1d3774fdea09f6ed11a9c"
+    if Hardware::CPU.arm?
+      url "https://github.com/goodwithtech/dockle/releases/download/v0.4.9/dockle_0.4.9_macOS-ARM64.tar.gz"
+      sha256 "717e72757e589d896b0dfded3dcb0e3a698307e287d67a654438162fe780b506"
 
       def install
         bin.install "dockle"
@@ -28,16 +28,16 @@ class Dockle < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goodwithtech/dockle/releases/download/v0.4.8/dockle_0.4.8_Linux-ARM64.tar.gz"
-      sha256 "ffa6427829f79373c49863f57f87e2db97676f1d51d828f1cb8086435ee0a684"
+      url "https://github.com/goodwithtech/dockle/releases/download/v0.4.9/dockle_0.4.9_Linux-ARM64.tar.gz"
+      sha256 "8e625f40f7fab47dfa7df13026d773d884d1d0e7ed7356673bf247e7af073b9b"
 
       def install
         bin.install "dockle"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/goodwithtech/dockle/releases/download/v0.4.8/dockle_0.4.8_Linux-64bit.tar.gz"
-      sha256 "9a94651a76dfccbe71c56252a7dd3182e9306ab6eacb64be462cadf42be56fac"
+      url "https://github.com/goodwithtech/dockle/releases/download/v0.4.9/dockle_0.4.9_Linux-64bit.tar.gz"
+      sha256 "ec75eb7787f5beb650fe2e4417416bb4723ee4c21db5df66c71c66eb88f629f9"
 
       def install
         bin.install "dockle"
