@@ -5,20 +5,20 @@
 class Dockle < Formula
   desc "Simple security auditing, helping build the Best Docker Images"
   homepage "https://github.com/goodwithtech/dockle"
-  version "0.4.11"
+  version "0.4.13"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/goodwithtech/dockle/releases/download/v0.4.11/dockle_0.4.11_macOS-64bit.tar.gz"
-      sha256 "11fc26019fc0adb749fb3c2162dde36edac1a70276ec90f12426b2d9303b1290"
+    if Hardware::CPU.arm?
+      url "https://github.com/goodwithtech/dockle/releases/download/v0.4.13/dockle_0.4.13_macOS-ARM64.tar.gz"
+      sha256 "f434bd52989e0cc8de22388bf87ad306b8ab435738b0dd497216d7d1b71f4778"
 
       def install
         bin.install "dockle"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/goodwithtech/dockle/releases/download/v0.4.11/dockle_0.4.11_macOS-ARM64.tar.gz"
-      sha256 "4a930e3c72eeb6cf6bde55fb7704d8b944f134a2a3cf2b2c6f11f00b7aade309"
+    if Hardware::CPU.intel?
+      url "https://github.com/goodwithtech/dockle/releases/download/v0.4.13/dockle_0.4.13_macOS-64bit.tar.gz"
+      sha256 "00850235b12882e239f57f27e0f9e95c55c4a5c5b70748d820e2bdf9d28046db"
 
       def install
         bin.install "dockle"
@@ -27,17 +27,17 @@ class Dockle < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goodwithtech/dockle/releases/download/v0.4.11/dockle_0.4.11_Linux-ARM64.tar.gz"
-      sha256 "84fe71cb53ac1405c40ae8df6bd03bcf950ca4d0636a5d1273f9c2867061281a"
+    if Hardware::CPU.intel?
+      url "https://github.com/goodwithtech/dockle/releases/download/v0.4.13/dockle_0.4.13_Linux-64bit.tar.gz"
+      sha256 "29bacdde2ae2177214815f3ccc0a12707250d5a7f5473d58a290db545fdb90ef"
 
       def install
         bin.install "dockle"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/goodwithtech/dockle/releases/download/v0.4.11/dockle_0.4.11_Linux-64bit.tar.gz"
-      sha256 "9ba6c138eb2b0be4755c87dc205bc6fad02353ddf5148f079f6ecebbbaab65d4"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/goodwithtech/dockle/releases/download/v0.4.13/dockle_0.4.13_Linux-ARM64.tar.gz"
+      sha256 "fe4ce73d8ba03f03a4d63c98142776de8c464d6b74a911ebeb48eb603ec9c56a"
 
       def install
         bin.install "dockle"
